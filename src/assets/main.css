@@ -1,0 +1,65 @@
+.vp-editor {
+    max-width: 100%;
+    position: relative;
+    cursor: crosshair;
+    height: auto;
+    font-size: 15px;
+    touch-action: none;
+}
+
+.vp-image {
+    margin: 0;
+    width: 100%;
+}
+
+.vp-toolbar {
+    width: 100%;
+    margin-top: 0.25em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25em 2em;
+}
+
+.vp-toolbar div {
+    display: flex;
+    gap: 0.25em;
+}
+
+.vp-toolbar button,
+.vp-toolbar input[type='color'] {
+    /* 使用变量（默认走亮色） */
+    background: var(--vp-btn-bg, #eee);
+    color: var(--vp-btn-fg, #222);
+    outline: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border: 1px solid var(--vp-btn-border, #aaa);
+    box-shadow: 0 0.2em 0.3em var(--vp-btn-shadow, rgba(0, 0, 0, 0.2));
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vp-toolbar input[type='color']:hover,
+.vp-toolbar button:hover,
+.vp-toolbar button.active {
+    background: var(--vp-btn-bg-hover, #ddd);
+    border: 1px solid var(--vp-btn-border-hover, #999);
+    box-shadow: 0 0.2em 0.3em var(--vp-btn-shadow-hover, #bbb);
+}
+
+/* 暗色主题作用域（由 App.vue 注入的 class 控制） */
+.theme-dark .vp-toolbar button,
+.theme-dark .vp-toolbar input[type='color'] {
+    --vp-btn-bg: #2b2b2b;
+    --vp-btn-fg: #e6e6e6;
+    --vp-btn-border: #4a4a4a;
+    --vp-btn-shadow: rgba(0, 0, 0, 0.6);
+
+    --vp-btn-bg-hover: #3a3a3a;
+    --vp-btn-border-hover: #5a5a5a;
+    --vp-btn-shadow-hover: rgba(0, 0, 0, 0.7);
+}

@@ -1,6 +1,14 @@
-# paint-flow-ui
+# PaintFlow UI
 
-This template should help get you started developing with Vue 3 in Vite.
+Client Web UI Server for PaintFlow.
+
+modify `.env` to change the server address.
+```yaml
+# .env
+VITE_API_BASE_URL=http://10.24.1.26:7988
+VITE_DEV_SERVER_HOST=0.0.0.0
+VITE_DEV_SERVER_PORT=8777
+```
 
 ## Recommended IDE Setup
 
